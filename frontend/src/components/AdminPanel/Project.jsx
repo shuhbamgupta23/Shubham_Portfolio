@@ -30,10 +30,9 @@ const Project = () => {
     setDescription("");
     setTechStack("");
   };
-
   const submitHandler = async (e) => {
     e.preventDefault();
-    await dispatch(addProject(title, url, image, description, techStack));
+    await dispatch(addProject(url, title, image, description, techStack));
     dispatch(getUser());
     clear()
   };

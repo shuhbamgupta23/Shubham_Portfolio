@@ -211,7 +211,6 @@ export const addTimeline = async (req, res) => {
 export const addProject = async (req, res) => {
   try {
     const { url, title, image, description, techStack } = req.body;
-
     const user = await User.findById(req.user._id);
     const myCloud = await cloudinary.v2.uploader.upload(image, {
       folder: "portfolio",
@@ -255,7 +254,7 @@ export const deleteProject = async (req, res) => {
     user.projects = user.projects.filter((item) => item._id !=  id);
     await user.save();
 
-    res.status(200).json({ success: true, message: "Deleted from Timeline" });
+    res.status(200).json({ success: true, message: "Deleted from Projects" });
   } catch (err) {
     return res.status(400).json({ success: false, message: err.message });
   }

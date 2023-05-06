@@ -50,7 +50,7 @@ export const ProjectCard = ({
 };
 
 const Projects = ({ projects }) => {
-
+  console.log(projects)
   return (
     <div className="projects">
       <Typography variant="h3">

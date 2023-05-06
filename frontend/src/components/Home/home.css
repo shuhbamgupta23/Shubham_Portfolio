@@ -200,10 +200,11 @@
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
+  top:45%;
 }
 
 .homeSkillsBox > svg {
-  font-size: 5vmax;
+  font-size: 3vmax;
   color: white;
   transition: all 0.5s;
   margin: 10px;

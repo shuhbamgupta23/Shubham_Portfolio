@@ -14,6 +14,7 @@ import { useSelector } from "react-redux";
 import AdminPanel from "./components/AdminPanel/AdminPanel";
 import Timeline from "./components/AdminPanel/Timeline";
 import Project from "./components/AdminPanel/Project";
+import Loader from "./components/Loader/Loader";
 
 function App() {
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ function App() {
   return (
     <Router>
       {loading ? (
-        <div>loading</div>
+       <Loader/>
       ) : (
         <>
           <Header />

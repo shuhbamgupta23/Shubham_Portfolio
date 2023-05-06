@@ -95,9 +95,9 @@ const Home = ({ timeline, skills }) => {
     return window.addEventListener("scroll", () => {
       camera.rotation.z = window.scrollY * 0.003;
       const skillsBox = document.getElementById("homeSkillsBox");
-      if (window.scrollY > 1500) {
+      if (window.scrollY > 1500 && skillsBox !== undefined && skillsBox !== null) {
         skillsBox.style.animationName = "homeSkillsBoxAnimationOn";
-      } else {
+      } else if(window.scrollY < 1500 && skillsBox !== undefined && skillsBox !== null) {
         skillsBox.style.animationName = "homeSkillsBoxAnimationOff";
       }
     });
