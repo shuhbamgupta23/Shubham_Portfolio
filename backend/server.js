@@ -1,9 +1,9 @@
 import { app } from "./app.js";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cloudinary from "cloudinary";
 
-dotenv.config();
+// dotenv.config();
 
 PORT = 4000
 
